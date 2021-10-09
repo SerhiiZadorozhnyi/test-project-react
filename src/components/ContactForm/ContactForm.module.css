@@ -1,7 +1,11 @@
+.ContactForm__container {
+    /* margin-top: 92px; */
+}
+
 .item__form {
     display: flex;
     /* flex-wrap: nowrap; */
-    margin: 15px;
+    /* margin: 15px; */
     padding: 0 10px;
 }
 

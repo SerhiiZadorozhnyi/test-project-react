@@ -14,7 +14,7 @@ function ContactView() {
     return(
         <>
             <ContactForm />
-            <Filter />
+            {/* <Filter /> */}
             <ContactList />
         </>
     );

@@ -28,39 +28,42 @@ function ContactList() {
 
       <List>
         {contacts.map(({ id, name, number }) => (
-          <ListItem key={id}>
+          <ListItem key={id} className={styles.table__contacts} >
             <ListItemAvatar>
               <Avatar></Avatar>
             </ListItemAvatar>
-            <ListItemText primary={name} secondary={number} />
-            <Link
-              className={styles.button__mardg}
-              to={{
-                pathname: `/contacts/${id}`,
-                state: { from: location },
-                name: name,
-                number: number,
-              }}
-            >
+            <ListItemText primary={name} />
+            <ListItemText secondary={number} />
+            <div>
+              <Link
+                className={styles.button__mardg}
+                to={{
+                  pathname: `/contacts/${id}`,
+                  state: { from: location },
+                  name: name,
+                  number: number,
+                }}
+              >
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="small"
+                  startIcon={<BorderColorIcon />}
+                >
+                  Edit
+                </Button>
+              </Link>
+
               <Button
                 variant="contained"
                 color="primary"
                 size="small"
-                startIcon={<BorderColorIcon />}
+                startIcon={<DeleteIcon />}
+                onClick={() => onDeleteContact(id)}
               >
-                Edit
+                Delete
               </Button>
-            </Link>
-
-            <Button
-              variant="contained"
-              color="primary"
-              size="small"
-              startIcon={<DeleteIcon />}
-              onClick={() => onDeleteContact(id)}
-            >
-              Delete
-            </Button>
+            </div>
           </ListItem>
         ))}
       </List>

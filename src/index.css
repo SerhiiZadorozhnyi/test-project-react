@@ -16,8 +16,13 @@ code {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* border-bottom: 1px solid #2a363b; */
   border-bottom: 1px solid rgba(0,0,0,0.12);
+  position: fixed;
+  /* width: 100%; */
+  /* background-color: #3700b3; */
+  padding-top: 10px;
+  padding-bottom: 35px;
+  z-index: 99;
 }
 
 .navLink {

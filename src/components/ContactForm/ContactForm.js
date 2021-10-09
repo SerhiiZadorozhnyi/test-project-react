@@ -52,7 +52,7 @@ function ContactForm() {
 
 
   return (
-    <>
+    <div className={styles.ContactForm__container}>
       <form 
         onSubmit={handleSubmit} 
         className={styles.item__form} 
@@ -105,7 +105,7 @@ function ContactForm() {
           </Button>
         </div>
       </form>
-    </>
+    </div>
   );
 }
   

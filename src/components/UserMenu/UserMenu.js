@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserName } from 'redux/auth/auth-selectors';
 import { logOut } from 'redux/auth/auth-operations';
+import Filter from '../../components/Filter/Filter'
 
 import styles from './UserMenu.module.css';
 import Button from '@material-ui/core/Button';
@@ -15,6 +16,7 @@ function UserMenu() {
 
     return (
         <div className={styles.container__menu}>
+            <Filter className={styles.search__input} />
             <span className={styles.avatar__menu}> </span>
             <span className={styles.name__menu}> {name}</span>
             <Button
