@@ -1,0 +1,20 @@
+.item__contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.item__form_edit {
+    display: block;
+    padding: 50px 0px;
+}
+
+.item__input_edit {
+    padding-top: 16px;
+    padding-bottom: 8px;
+}
+
+.button__mardg {
+    margin-right: 5px;
+    text-decoration: none;
+}
